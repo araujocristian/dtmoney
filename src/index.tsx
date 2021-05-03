@@ -16,15 +16,15 @@ createServer({
           title: "Freelance de Website",
           type: "deposit",
           category: "Dev",
-          mount: 6000,
+          amount: 6000,
           createdAt: new Date("2021-02-12 09:00:00"),
         },
         {
-          id: 1,
+          id: 2,
           title: "Aluguel",
           type: "withdraw",
           category: "Casa",
-          mount: 1100,
+          amount: 1100,
           createdAt: new Date("2021-02-14 11:00:00"),
         },
       ],
@@ -35,7 +35,7 @@ createServer({
     this.namespace = "api";
 
     this.get("/transactions", () => {
-      return this.schema.all("transactions");
+      return this.schema.all("transaction");
     });
 
     this.post("/transactions", (schema, request) => {
